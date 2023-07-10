@@ -33,7 +33,7 @@ data$Periodo <- as.Date(data$Periodo, format = "%d/%m/%Y")
 
                       
 # Gráfico de líneas para promedio y puntos (1)
-ggplot(data, aes(x = Periodo, y= A.fin.de.periodo)) +
+gráfico_riesgo <- ggplot(data, aes(x = Periodo, y= A.fin.de.periodo)) +
   geom_line(colour = 'black') +
   geom_point(color = 'black') +
   scale_x_date(breaks = date_breaks, date_labels = '%b-%Y') +
@@ -53,6 +53,9 @@ ggplot(data, aes(x = Periodo, y= A.fin.de.periodo)) +
         plot.subtitle = element_text(size = 12),
         plot.caption = element_text(size = 8))
 
+ggsave(filename = "grafico_riesgo_pais.png", 
+       plot = gráfico_riesgo, 
+       width = 8, height = 6, dpi = 300)
 
 
 
