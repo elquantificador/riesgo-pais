@@ -1,2 +1,2 @@
-# RiesgopaisSoria
-Artículo para el Quantificador del riesgo país (Andrés Soria y Daniel Sánchez)
+# Riesgo país Andrés Soria
+Artículo para el Quantificador del riesgo país 
