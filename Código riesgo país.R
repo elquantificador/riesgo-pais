@@ -31,7 +31,23 @@ data <- data.frame(Periodo = periodo, A.fin.de.periodo = a_fin_periodo)
 # Convertir a formato fecha
 data$Periodo <- as.Date(data$Periodo, format = "%d/%m/%Y")
 
-                      
+# Definir las coordenadas de la zona a pintar
+zona_xmin <- as.Date("01/10/2019", format = "%d/%m/%Y")
+zona_xmax <- as.Date("01/12/2019", format = "%d/%m/%Y")
+zona_ymin <- 0
+zona_ymax <- 5500
+zona_xmin1 <- as.Date("01/02/2020", format = "%d/%m/%Y")
+zona_xmax1 <- as.Date("01/04/2020", format = "%d/%m/%Y")
+
+zona_xmin2 <- as.Date("01/01/2021", format = "%d/%m/%Y")
+zona_xmax2 <- as.Date("01/04/2021", format = "%d/%m/%Y")
+
+zona_xmin3 <- as.Date("01/05/2022", format = "%d/%m/%Y")
+zona_xmax3 <- as.Date("01/09/2022", format = "%d/%m/%Y")
+
+zona_xmin4 <- as.Date("01/01/2023", format = "%d/%m/%Y")
+zona_xmax4 <- as.Date("01/03/2023", format = "%d/%m/%Y")
+
 # Gráfico de líneas para promedio y puntos (1)
 gráfico_riesgo <- ggplot(data, aes(x = Periodo, y= A.fin.de.periodo)) +
   geom_line(colour = 'black') +
@@ -51,7 +67,17 @@ gráfico_riesgo <- ggplot(data, aes(x = Periodo, y= A.fin.de.periodo)) +
         axis.text.y = element_text(size = 8),
         plot.title = element_text(face = 'bold'),
         plot.subtitle = element_text(size = 12),
-        plot.caption = element_text(size = 8))
+        plot.caption = element_text(size = 8))+
+  annotate('rect', xmin = zona_xmin, xmax = zona_xmax, ymin = zona_ymin, ymax = zona_ymax,
+      alpha = 0.1, fill = 'red')+
+  annotate('rect', xmin = zona_xmin1, xmax = zona_xmax1, ymin = zona_ymin, ymax = zona_ymax,
+           alpha = 0.1, fill = 'red')+
+  annotate('rect', xmin = zona_xmin2, xmax = zona_xmax2, ymin = zona_ymin, ymax = zona_ymax,
+           alpha = 0.1, fill = 'green')+
+  annotate('rect', xmin = zona_xmin3, xmax = zona_xmax3, ymin = zona_ymin, ymax = zona_ymax,
+           alpha = 0.1, fill = 'red')+
+  annotate('rect', xmin = zona_xmin4, xmax = zona_xmax4, ymin = zona_ymin, ymax = zona_ymax,
+           alpha = 0.1, fill = 'red')
 
 ggsave(filename = "grafico_riesgo_pais.png", 
        plot = gráfico_riesgo, 
