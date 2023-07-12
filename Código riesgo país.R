@@ -61,7 +61,15 @@ gráfico_riesgo <- ggplot(data, aes(x = Periodo, y= A.fin.de.periodo)) +
        caption = 'Nota: Fuente: Banco Central del Ecuador 
        El gráfico muestra la evolución del riesgo país en Ecuador durante el periodo de 2019 a 2023. 
        Los puntos base representan la diferencia entre la tasa de interés de los bonos soberanos del país 
-       y la tasa de interés libre de riesgo.Los datos utilizados en este gráfico fueron obtenidos del Banco Central del Ecuador.') +
+       y la tasa de interés libre de riesgo.Muestra el panorma económico para la inversión extranjera
+       La primera zona roja del gráfico está asociada a un aumento en el valor del riesgo debido a la crisis 
+       política causada por el paro nacional en octubre del 2019. 
+       La segunda zona roja está asociada al inicio de la pandemia COVID-19 a finales de febrero. En el
+       primer cuatrimestre del año 2021 hay una bajada que se debe al posicionamiento del nuevo gobierno con Guillermo
+       Lasso como presidente. A finales de mayo del 2022 existe una subida que está ligada a otro paro nacional
+       provocado por los precios de los combustibles. Y la última subida a finales de enero del 2023 se debe
+       principalmente a la inestabilidad del gobierno donde se pedía la renuncia del presidente que actualemnte ha llevado
+       a la muerte cruzada y la disolución de la asamblea.') +
   theme_article_rp +
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5),
         axis.text.y = element_text(size = 8),
