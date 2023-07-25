@@ -59,3 +59,5 @@ server <- function(input, output) {
 
 # Ejecutamos la aplicación 
 shinyApp(ui = ui, server = server)
+
+
