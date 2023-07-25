@@ -51,7 +51,7 @@ server <- function(input, output) {
           )
         )
       ) %>%
-      hc_add_series(name = "Riesgo país", data = df$`A fin de período`) %>%
+      hc_add_series(name = "Riesgo país", data = df$`Puntos_base`) %>%
       hc_credits(enabled = TRUE, text = "Fuente: Datos de riesgo país", style = list(fontSize = "8px"))
    
   })
