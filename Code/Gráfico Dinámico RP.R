@@ -1,5 +1,3 @@
-install.packages(c("shiny", "plotly", "highcharter", "readxl"))
-
 # Cargamos las librerías necesarias
 library(shiny)
 library(plotly)
@@ -14,8 +12,8 @@ ui <- fluidPage(
     sidebarPanel(
       dateRangeInput('dateRange',
                      label = 'Seleccione un rango de fechas',
-                     start = as.Date("2019-01-01"), 
-                     end = as.Date("2023-12-31")
+                     start = as.Date("2004-07-01"), 
+                     end = as.Date("2023-06-01")
       )
     ),
     
