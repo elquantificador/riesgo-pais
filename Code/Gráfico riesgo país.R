@@ -72,8 +72,11 @@ zona_xmax4 <- as.Date("01/03/2023", format = "%d/%m/%Y")
 zona_xmin5 <- as.Date("01/04/2023", format = "%d/%m/%Y")
 zona_xmax5 <- as.Date("01/06/2023", format = "%d/%m/%Y")
 
+zona_xmin6 <- as.Date("01/07/2020", format = "%d/%m/%Y")
+zona_xmax6 <- as.Date("01/09/2020", format = "%d/%m/%Y")
+
 caption_grafico_rp <-
-  'El riesgo país indica la diferencia entre la tasa de interés de los bonos soberanos del gobierno de un país (riesgosa) y la tasa de interés libre de riesgo (bonos E.E.U.U.). Un punto base es 0.01%. La primera zona roja del gráfico denota el período de la crisis política causada por el paro nacional en octubre del 2019. La segunda zona roja indica al inicio de la pandemia del COVID-19 a finales de febrero. La zona verde indica la caída del RP durante posicionamiento del gobierno de Guillermo Lasso (CREO). La tercera zona roja muestra el período donde de otro paro nacional que tomó fuerza en Julio 2022. Por último, se denota una zona roja en el comienzo del 2023 donde se observó inestabilidad del gobierno durante el juicio político al presidente Guillermo Lasso. Finalmente en gris se denotan los eventos en curso a la fecha de elaboración del gráfico tras la disolución de la Asamblea Nacional por "muerte cruzada". Datos del Banco Central del Ecuador.'
+  'El riesgo país indica la diferencia entre la tasa de interés de los bonos soberanos del gobierno de un país (riesgosa) y la tasa de interés libre de riesgo (bonos E.E.U.U.). Un punto base es 0.01%. La primera zona roja del gráfico denota el período de la crisis política causada por el paro nacional en octubre del 2019. La segunda zona roja indica al inicio de la pandemia del COVID-19 a finales de febrero. La primera zona verde es la disminución asociada con el préstamo del FMI. La segunda zona verde indica la caída del RP durante posicionamiento del gobierno de Guillermo Lasso (CREO). La tercera zona roja muestra el período donde de otro paro nacional que tomó fuerza en Julio 2022. Por último, se denota una zona roja en el comienzo del 2023 donde se observó inestabilidad del gobierno durante el juicio político al presidente Guillermo Lasso. Finalmente en gris se denotan los eventos en curso a la fecha de elaboración del gráfico tras la disolución de la Asamblea Nacional por "muerte cruzada". Datos del Banco Central del Ecuador.'
 
 # Gráfico de líneas para promedio y puntos (1)
 
@@ -107,7 +110,9 @@ grafico_riesgo <-
   annotate('rect', xmin = zona_xmin4, xmax = zona_xmax4, ymin = zona_ymin, ymax = zona_ymax,
            alpha = 0.1, fill = 'red')+
   annotate('rect', xmin = zona_xmin5, xmax = zona_xmax5, ymin = zona_ymin, ymax = zona_ymax,
-           alpha = 0.1, fill = 'grey60')
+           alpha = 0.1, fill = 'grey60')+
+  annotate('rect', xmin = zona_xmin6, xmax = zona_xmax6, ymin = zona_ymin, ymax = zona_ymax,
+         alpha = 0.1, fill = 'green')
 
 grafico_riesgo
 
