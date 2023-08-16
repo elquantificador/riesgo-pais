@@ -14,7 +14,7 @@ csl: style.csl
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 ```
 
-# I.  El latido de una economía
+# El latido de una economía
 En la antigüedad el ser humano luchaba por la supervivencia y la preservación de su especie enfrentando múltiples riesgos en su entorno. En contraste, hoy en día con sistemas globales interconectados, ¿contra qué objeto lucha el ser humano de un país como el Ecuador? ¿Cuál es una de las amenazas inminentes, pero poco percibidas para los ecuatorianos?
 La respuesta no es una sola, ya que existen varias conflictivas, como corrupción, inestabilidad política y económica, entre otras. Sin embargo, hay un objeto que suele pasar desapercibido, quizás por ser algo complicado de entender: el riesgo país o country risk premium. 
 
@@ -25,19 +25,23 @@ El riesgo país es un ente vivo y dinámico que interactúa con todos los nivele
 # Desentrañando al objeto: ¿qué es el riesgo país y cómo afecta al gobierno?
 ```{r}
 library(shiny)
-library(plotly)
 library(highcharter)
 library(readxl)
+
+# Definimos la UI para la aplicación
 ui <- fluidPage(
-  titlePanel("Puntos básicos del riesgo país Ecuador"),
+  titlePanel("Riesgo país Ecuador 2004-2023"),
   
   sidebarLayout(
     sidebarPanel(
       dateRangeInput('dateRange',
-                     label = 'Seleccione un rango de fechas',
+                     label = 'Filtrado dinámico por fechas',
                      start = as.Date("2004-07-01"), 
                      end = as.Date("2023-06-01")
-      )
+      ),
+      helpText("Fuente: Banco Central del Ecuador. Los puntos base del riesgo país representan la diferencia 
+               entre la tasa de rendimiento de la deuda de un país y la tasa libre de riesgo. Un mayor número de 
+               puntos base indica un mayor riesgo percibido asociado con la inversión en ese país.")
     ),
     
     mainPanel(
@@ -46,6 +50,7 @@ ui <- fluidPage(
   )
 )
 
+# Definimos el servidor para la aplicación
 server <- function(input, output) {
   # Leemos los datos
   data <- reactive({
@@ -60,26 +65,27 @@ server <- function(input, output) {
     df <- df[df$Periodo >= input$dateRange[1] & df$Periodo <= input$dateRange[2],]
     highchart() %>%
       hc_chart(type = "line") %>%
-      hc_title(text = "Análisis de riesgo país", style = list(fontSize = "24px", fontWeight = "bold")) %>%
-      hc_subtitle(text = "Filtrado por fechas", style = list(fontSize = "12px")) %>%
+      hc_title(text = "", style = list(fontSize = "24px", fontWeight = "bold")) %>%
+      hc_subtitle(text = "", style = list(fontSize = "12px")) %>%
       hc_xAxis(categories = df$Periodo, labels = list(rotation = -45)) %>%
-      hc_yAxis(title = list(text = "Riesgo país"), labels = list(style = list(fontSize = "8px"))) %>%
+      hc_yAxis(title = list(text = ""), labels = list(style = list(fontSize = "8px"))) %>%
       hc_plotOptions(
         series = list(
           color = 'black',
           marker = list(
             enabled = TRUE,
-            fillColor = 'black'
+            fillColor = 'black',
+            radius = 2
           )
         )
       ) %>%
-      hc_add_series(name = "Riesgo país", data = df$`Puntos_base`) %>%
-      hc_credits(enabled = TRUE, text = "Fuente: Datos de riesgo país", style = list(fontSize = "8px"))
-   
+      hc_add_series(name = "Riesgo país", data = df$`Puntos_base`)
   })
 }
 
+# Ejecutamos la aplicación 
 shinyApp(ui = ui, server = server)
+
 ```
 
 Anteriormente tienen a su disposición una serie de tiempo con todos los datos registrados del riesgo país en el Banco Central del Ecuador. El visualizador dinámico permite observar el indicador en cualquier período que se desee. Sin embargo, hay que conceptualizar: ¿qué representa el riesgo país? 
