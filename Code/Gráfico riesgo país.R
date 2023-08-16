@@ -90,7 +90,7 @@ grafico_riesgo <-
        y = 'Puntos base (1 = 0.01%)',
        title = 'Riesgo país Ecuador 2019-2023',
        subtitle = 'Puntos base mensuales de los bonos soberanos sobre la tasa libre de riesgo',
-       caption = str_wrap(caption_grafico_rp,140)) +
+       caption = str_wrap(caption_grafico_rp,220)) +
   theme_article_rp +
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5),
         axis.text.y = element_text(size = 8),
@@ -118,9 +118,9 @@ grafico_riesgo
 
 ggsave(filename = "Figures/grafico_riesgo_pais.png", 
        plot = grafico_riesgo, 
-       width = 9, 
-       height = 7, 
-       dpi = 900)
+       width = 12, 
+       height = 8, 
+       dpi = 1200)
 
 
 
