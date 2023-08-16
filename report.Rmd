@@ -13,7 +13,7 @@ csl: style.csl
 
 ```{r setup, include = FALSE}
 # Opciones de chunks
-knitr::opts_chunk$set(echo = F)
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 ```
 
 # I.  El latido de una economía
@@ -82,6 +82,8 @@ server <- function(input, output) {
 
 shinyApp(ui = ui, server = server)
 ```
+
+
 
 Anteriormente tienen a su disposición una serie de tiempo con todos los datos registrados del riesgo país en el Banco Central del Ecuador. El visualizador dinámico permite observar el indicador en cualquier período que se desee. Sin embargo, hay que conceptualizar: ¿qué representa el riesgo país? 
 Antes de continuar, es necesario entender lo que es un bono. Un bono es, en esencia, un préstamo que un inversor hace a una entidad, como a un gobierno o empresa. Al comprar un bono, se entrega dinero a la entidad, que promete devolverlo en una fecha futura, más una cantidad que corresponde al interés del préstamo. La tasa de interés implícita del bono, también conocida como el yield to maturity, es la recompensa que quien compra obtiene por realizar el servicio de prestamista y por asumir el riesgo de potencialmente no poder cobrar su dinero de vuelta.
