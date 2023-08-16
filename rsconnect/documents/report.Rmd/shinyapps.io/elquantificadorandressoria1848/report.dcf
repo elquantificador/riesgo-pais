@@ -1,0 +1,12 @@
+name: report
+title: report
+username: elquantificadorandressoria1848
+account: elquantificadorandressoria1848
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9616858
+bundleId: 7575007
+url: https://elquantificadorandressoria1848.shinyapps.io/report/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
