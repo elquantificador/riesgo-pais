@@ -1,0 +1,13 @@
+name: Codedinamico
+title: Codedinamico
+username: elquantificadorandressoria1848
+account: elquantificadorandressoria1848
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9632210
+bundleId: 7584758
+url: https://elquantificadorandressoria1848.shinyapps.io/Codedinamico/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|Code/Gráfico riesgo país.R|Figures/grafico_riesgo_pais.png|README.md|refs.bib|report.Rmd|style.csl
