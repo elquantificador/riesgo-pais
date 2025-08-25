@@ -54,7 +54,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   # Leemos los datos
   data <- reactive({
-    df <- read_excel("Data/Puntos riesgo país.xlsx")
+    df <- read_excel("../data/Puntos riesgo país.xlsx")
     df$Periodo <- as.Date(df$Periodo, format = "%d/%m/%Y")
     df
   })
@@ -109,7 +109,7 @@ Por otro lado, factores políticos incluyen golpes de estado, cambios en la admi
 A continuación se muestra el periodo 2019 a 2023 del indicador en el Ecuador. En el gráfico se puede evidenciar ciertas zonas ligadas a eventos históricos en el país que marcaron valores elevados o bajos. 
 
 ```{r}
-knitr::include_graphics('Figures/grafico_riesgo_pais.png')
+knitr::include_graphics('../figures/grafico_riesgo_pais.png')
 ```
 
 La primera subida considerable, en octubre de 2019, sucede al mismo tiempo que el paro nacional durante el gobierno de Lenín Moreno. Este tipo de eventos pueden aumentar el riesgo país, ya que una situación de inestabilidad política puede dificultar la capacidad del gobierno para cumplir con sus obligaciones financieras. 
