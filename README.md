@@ -6,9 +6,10 @@ En este repositorio se almacena la base de datos y archivos relacionados al art�
 
 ## Contenido del repositorio
 
-- `Code`: Dos archivos de R. Script gráfico dinámico, script gráfico estático con anotaciones del Riesgo País.
-- `Data`: Base de datos excel con los puntos mensuales del RP del Banco Central (2004-2023).
-- `Figures`: Imagen resultado del script del gráfico estático.
+- `code`: Dos archivos de R. Script gráfico dinámico, script gráfico estático con anotaciones del Riesgo País.
+- `data`: Base de datos excel con los puntos mensuales del RP del Banco Central (2004-2023).
+- `figures`: Imagen resultado del script del gráfico estático.
+- `report`: Documento R Markdown del artículo completo sobre riesgo país, junto con archivos de bibliografía y estilo de citación.
 
 ## Referencias
 
