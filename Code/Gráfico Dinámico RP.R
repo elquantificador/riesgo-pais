@@ -29,7 +29,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   # Leemos los datos
   data <- reactive({
-    df <- read_excel("Data/Puntos riesgo país.xlsx")
+    df <- read_excel("../Data/Puntos riesgo país.xlsx")
     df$Periodo <- as.Date(df$Periodo, format = "%d/%m/%Y")
     df
   })

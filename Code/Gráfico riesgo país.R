@@ -14,7 +14,7 @@ library(stringr)
 # Importar base
 
 Puntos_riesgo_país <- 
-  read_excel("Data/Puntos riesgo país.xlsx")
+  read_excel("../Data/Puntos riesgo país.xlsx")
 
 # Creación de tema
 
@@ -116,7 +116,7 @@ grafico_riesgo <-
 
 grafico_riesgo
 
-ggsave(filename = "Figures/grafico_riesgo_pais.png", 
+ggsave(filename = "../Figures/grafico_riesgo_pais.png", 
        plot = grafico_riesgo, 
        width = 12, 
        height = 8, 
