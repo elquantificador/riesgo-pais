@@ -2,7 +2,7 @@
 En este repositorio se almacena la base de datos y archivos relacionados al artículo del Quantificador sobre el Riesgo País.
 
 **Elaborado por:** Laboratorio de Investigación para el Desarrollo del Ecuador (LIDE).  
-**Adminsitrador del repositorio:** Andrés Soria y Daniel Sánchez.
+**Administradores del repositorio:** Andrés Soria y Daniel Sánchez.
 
 ## Contenido del repositorio
 
