@@ -28,3 +28,17 @@ Para más información, consulta el perfil de GitHub del [autor](https://github.
 ## Referencias
 
 - Banco Central del Ecuador—Información Económica. (s. f.). Recuperado 12 de julio de 2023, de https://www.bce.fin.ec/informacioneconomica/
+
+
+## Licencias y cómo citar
+
+- **Código:** [MIT](LICENSE).
+- **Texto, figuras y tablas:** [CC BY-NC 4.0](LICENSE-content).
+- **Datos de terceros:** conservan los términos de su fuente
+  ([aviso](DATA-NOTICE.md)).
+- **Nombre y logotipos:** todos los derechos reservados.
+
+Las cifras y resultados pueden citarse libremente. Menciona a los autores y a
+El Quantificador (LIDE) y enlaza la publicación original. Los usos comerciales
+de gráficos, tablas o texto requieren autorización previa:
+elquantificador@laboratoriolide.org. Ver también `CITATION.cff`.
