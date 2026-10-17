@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Si usas este material, cítalo con estos datos."
+title: "Repositorio con el código de R para el artículo de El Quantificador, 'Ecuador en la encrucijada', de Andrés Soria"
+type: dataset
+authors:
+  - name: "El Quantificador (LIDE)"
+    website: "https://elquantificador.org/"
+repository-code: "https://github.com/elquantificador/riesgo-pais"
+license: MIT
+# Agrega aquí a las personas autoras del artículo cuando corresponda.
