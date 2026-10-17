@@ -61,11 +61,10 @@ el README anterior y los scripts. No hay pasos de limpieza ni descarga: el
 
 1. Instala los paquetes de la lista de Requisitos. Los scripts solo llaman a
    `library()`, no instalan nada.
-2. Gráfico estático: ejecuta `code/Gráfico riesgo país.R` con `code/` como
-   directorio de trabajo, porque lee `../data/Puntos riesgo país.xlsx` y
-   guarda en `../figures/grafico_riesgo_pais.png`. El README anterior indica
-   `source("code/Gráfico riesgo país.R")` desde la raíz; con esas rutas
-   relativas funciona si se usa `chdir = TRUE`.
+2. Gráfico estático: ejecuta `source("code/Gráfico riesgo país.R")` con la
+   raíz del repositorio como directorio de trabajo. El script lee
+   `data/Puntos riesgo país.xlsx` y guarda en
+   `figures/grafico_riesgo_pais.png` (crea `figures/` si no existe).
 3. Aplicación Shiny: abre `code/shiny/Gráfico Dinámico RP.R` y usa "Run App", o
    ejecuta `shiny::runApp("code/shiny/Gráfico Dinámico RP.R")`.
 4. Informe: abre `report/report.Rmd` y usa "Knit to HTML".
